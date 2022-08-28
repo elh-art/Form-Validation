@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="HTML CSS and Javascript tutorials"> 
+    <script src="https://kit.fontawesome.com/41c8b474e2.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <title>Sign Up!</title>
+</head>
+<body class="bg-light text-dark">
+
+  <div class="container">
+    <form class="m-5 mb-0" onsubmit="handleSignUp(event)" novalidate>
+      <div class="mb-3">
+        <input type="text" onkeyup="validate(event)" class="form-control form-control-lg" id="firstname" required placeholder="Firstname" autocomplete="off">
+        <div id="firstname-error" class="form-text text-danger"></div>
+      </div>
+      <div class="mb-3">
+        <input type="text" onkeyup="validate(event)" class="form-control form-control-lg" id="lastname" required placeholder="Lastname" autocomplete="off">
+        <div id="lastname-error" class="form-text text-danger"></div>
+      </div>
+      <div class="mb-3">
+        <input type="email" onkeyup="validate(event)" class="form-control form-control-lg" id="email" required placeholder="Email" autocomplete="off">
+        <div id="email-error" class="form-text text-danger"></div>
+      </div>
+      <div class="mb-3">
+        <input type="password" onkeyup="validate(event)" class="form-control form-control-lg" id="password" required placeholder="Password" autocomplete="off">
+        <div id="password-error" class="form-text text-danger"></div>
+      </div>
+      <button type="submit" class="btn btn-primary">
+        <span id="spinner" class="d-none spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+        Submit
+      </button>
+      <div id="response-error" class="form-text text-danger"></div>
+    </form>
+    <button onclick="moveToSignIn(event)" class="btn btn-secondary m-5 mt-3">Sign In</button>
+  </div>
+     
+  <script src="./scrip.js"></script>  
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+</body>
+</html>
